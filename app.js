@@ -21,3 +21,32 @@ function validateName() {
         name.classList.remove('is-invalid');
     }
 }
+
+function validateZip() {
+    // select zip code
+    const zip = document.getElementById('zip');
+    const re = /^[0-9]{5}(-[0-9]{4})?$/;
+
+    //conditional logic to evaluate
+    if(!re.test(zip.value)) {
+        zip.classList.add('is-invalid');
+    } else {
+        // remove invalid class
+        zip.classList.remove('is-invalid');
+    }
+}
+
+function validateEmail() {
+    const email = document.getElementById('email');
+    const re = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
+
+    if(!re.test(email.value)) {
+        email.classList.add('is-invalid');
+    } else {
+        email.classList.remove('is-invalid');
+    }
+}
+
+function validatePhone() {
+
+}
