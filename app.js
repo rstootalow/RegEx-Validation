@@ -48,5 +48,13 @@ function validateEmail() {
 }
 
 function validatePhone() {
+    const phone = document.getElementById('phone');
+    const re = /^\(?\d{3}\)?[-. ]?\d{3}[-. ]?\d{4}$/;
 
+    // conditional logic to evaluate
+    if(!re.test(phone.value)) {
+        phone.classList.add('is-invalid');
+    } else {
+        phone.classList.remove('is-invalid');
+    }
 }
